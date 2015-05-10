@@ -1,0 +1,37 @@
+COMPUTER NETWORKS PA 2
+Wei Dai (wd2248)
+wd2248@columbia.edu
+
+1. Introduction
+
+In this project, a BF routing algorithm is implemented to simulate the
+routing tables. 
+
+The routing tables and distance vectors are implemented using concurrent
+hashmap. 
+
+The features are:
+- All the commands in the part 1 of assigment decription are implemented
+- Poison reverse is implemented to avoid count to infinity
+- File transfer: correctly
+
+2. How to run the code
+
+Run the make file the compile the project:
+
+make
+
+Then run the entry file:
+
+java BFclient <name of config file>
+
+3. Sample Commands (all in upper case):
+
+(1) LINKDOWN <ip_address> <port>
+(2) LINKUP <ip_address> <port>
+(3) CHANGECOST <ip_address> <port> <new cost>
+(4) SHOWRT
+(5) CLOSE
+(6) TRANSFER <file name> <ip address> <port>
+	- The new file in the destination will be renamed as <original name>_transfered.blabla
+	- Assume that the file size will not exceed 100000 Bytes.
